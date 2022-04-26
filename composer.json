@@ -1,0 +1,50 @@
+{
+  "name": "alkoumi/laravel-4jawaly-sms",
+  "description": "Awesome Laravel 🔥 package for sending SMS using https://www.4jawaly.net gateway حزمة لارافيل لخدمة الرسائل القصيرة المقدمة من فورجوالي",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Mohamed Elkoumi",
+      "email": "mohammedelkoumi@gmail.com",
+      "homepage": "https://github.com/alkoumi"
+    }
+  ],
+  "homepage": "https://github.com/alkoumi/laravel-4jawaly-sms",
+  "keywords": [
+    "Laravel",
+    "Laravel SMS",
+    "Laravel4jawalySms",
+    "4Jawaly SMS Service Provider",
+    "SMS",
+    "فورجوالي للرسائل القصيرة",
+    "الرسائل القصيرة",
+    "إضافة مكتبة فورجوالي لإرسال الرسائل القصيرة إلى لارافيل"
+  ],
+  "require": {
+    "guzzlehttp/guzzle": "^7.4"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~9.0",
+    "orchestra/testbench": "~7"
+  },
+  "autoload": {
+    "psr-4": {
+      "Alkoumi\\Laravel4jawalySms\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Alkoumi\\Laravel4jawalySms\\Tests\\": "tests"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Alkoumi\\Laravel4jawalySms\\Laravel4jawalySmsServiceProvider"
+      ],
+      "aliases": {
+        "JawalySms": "Alkoumi\\Laravel4jawalySms\\Facades\\JawalySms"
+      }
+    }
+  }
+}

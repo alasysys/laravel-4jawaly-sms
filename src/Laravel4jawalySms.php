@@ -3,9 +3,9 @@
 	namespace Alkoumi\Laravel4jawalySms;
 	
 	use Alkoumi\Laravel4jawalySms\Notifications\Admin;
-	use Alkoumi\Laravel4jawalySms\Sms\Manager;
+	use Alkoumi\Laravel4jawalySms\Sms\Sender;
 	
-	class Laravel4jawalySms extends Manager
+	class Laravel4jawalySms extends Sender
 	{
 		protected mixed $numbers;
 		protected string $msg = "";

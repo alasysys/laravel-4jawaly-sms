@@ -10,6 +10,12 @@
 		
 		protected int $availableBalance;
 		
+		public function getBalance(): int
+		{
+			$this->setBalance();
+			return (int) $this->availableBalance;
+		}
+		
 		private function setBalance(): void
 		{
 			$status = $this->decode($this->client()->post($this->balanceEndpoient , ['form_params' => $this->baseParams()]));

@@ -4,7 +4,11 @@
 	
 	trait ResponseDecoder
 	{
-		private function decode($response): mixed
+		/**
+		 * @param $response
+		 * @return mixed
+		 */
+		private function decode($response)
 		{
 			return json_decode($response->getBody());
 		}

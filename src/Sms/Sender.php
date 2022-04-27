@@ -10,19 +10,13 @@
 	use Alkoumi\Laravel4jawalySms\Traits\ResponseDecoder;
 	use JetBrains\PhpStorm\ArrayShape;
 	
-	class Manager
+	class Sender
 	{
 		use Configrable , ExtractMobileNumbers , ResponseDecoder , HasBalance , HasClientEndPoint;
 		
 		public function __construct()
 		{
 			$this->fetchConfig();
-		}
-		
-		public function getBalance(): int
-		{
-			$this->setBalance();
-			return (int) $this->availableBalance;
 		}
 		
 		protected function sendTheMessage(): string

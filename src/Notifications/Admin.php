@@ -17,7 +17,7 @@
 			Mail::send([] , [] , function ($message) use ($notificationMessage , $msg , $lastuserpoints , $currentuserpoints , $SMSNUmber , $totalsentnumbers) {
 				$message->to(config('4jawaly-sms.admin_email'))
 				        ->subject(__('Send status for your 4Jawaly SMS account - ').config('app.name'))
-				        ->setBody(
+				        ->html(
 					        '<h3>'.'الرسالة العامة : '.$notificationMessage.'</br>'.
 					        'الحالة : '.$msg.'</br>'.
 					        'الأرقام المرسل إليها  : '.$totalsentnumbers.'</br>'.

@@ -16,19 +16,27 @@ This is a Laravel 🔥 package to send SMS using https://www.4jawaly.net 🥳 ac
 
 ## Installation
 
-1. Install the package using Composer:
+1. Install the package using composer:
+
+- for apps with ```Laravel 8``` and before:
 
 ```
-Composer require alkoumi/laravel-4jawaly-sms
+composer require alkoumi/laravel-4jawaly-sms:1.4
+```
+
+- for apps from ```Laravel 9``` :
+
+```
+composer require alkoumi/laravel-4jawaly-sms
 ```
 
 2. The service provider will automatically registered. Or you may manually do in your `config/app.php` file:
 
 ```
 'providers' => [
-      // ...
-      Alkoumi\Laravel4jawalySms\Laravel4jawalySmsServiceProvider::class,
-];
+          //...
+          Alkoumi\Laravel4jawalySms\Laravel4jawalySmsServiceProvider::class,
+    ];
 ```
 
 3. Publish 🥳 the configuration 💼 file using this command:

@@ -7,8 +7,8 @@
 	
 	class Laravel4jawalySms extends Sender
 	{
-		protected mixed $numbers;
-		protected string $msg = "";
+		protected $numbers;
+		protected $msg = "";
 		
 		public function message(string $messageText): self
 		{
@@ -22,7 +22,11 @@
 			return $this;
 		}
 		
-		public function to(mixed $mobileNumbers): self
+		/**
+		 * @param  mixed  $mobileNumbers
+		 * @return self
+		 */
+		public function to($mobileNumbers): self
 		{
 			$this->extractMobileNumbers($mobileNumbers);
 			return $this;

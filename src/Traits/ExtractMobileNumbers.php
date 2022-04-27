@@ -10,7 +10,11 @@
 	
 	trait ExtractMobileNumbers
 	{
-		protected function extractMobileNumbers(mixed $mobileNumbers): void
+		/**
+		 * @param  mixed  $mobileNumbers
+		 * @return void
+		 */
+		protected function extractMobileNumbers($mobileNumbers): void
 		{
 			if (is_integer($mobileNumbers)) {
 				$this->mobileCanNotBeInteger();
